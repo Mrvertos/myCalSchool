@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Machine Hesab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dastgah-koli">
+        <input type="text" id="safhe_namayesh" placeholder="0" readonly>
+
+        <div class="safhe-dokme">
+            <button class="pishrafte" onclick="amaliat_riazi('sin')">sin</button>
+            <button class="pishrafte" onclick="amaliat_riazi('cos')">cos</button>
+            <button class="pishrafte" onclick="amaliat_riazi('tan')">tan</button>
+            <button class="pishrafte" onclick="amaliat_riazi('log')">log</button>
+
+            <button class="pishrafte" onclick="amaliat_riazi('tavan')">^</button>
+            <button class="pishrafte" onclick="amaliat_riazi('jazr')">√</button>
+            <button class="pak-kon" onclick="pak_kardan()">C</button>
+            <button class="amal" onclick="ezafe_amal('/')">÷</button>
+
+            <button class="adad" onclick="neveshtan('7')">7</button>
+            <button class="adad" onclick="neveshtan('8')">8</button>
+            <button class="adad" onclick="neveshtan('9')">9</button>
+            <button class="amal" onclick="ezafe_amal('*')">×</button>
+
+            <button class="adad" onclick="neveshtan('4')">4</button>
+            <button class="adad" onclick="neveshtan('5')">5</button>
+            <button class="adad" onclick="neveshtan('6')">6</button>
+            <button class="amal" onclick="ezafe_amal('-')">-</button>
+
+            <button class="adad" onclick="neveshtan('1')">1</button>
+            <button class="adad" onclick="neveshtan('2')">2</button>
+            <button class="adad" onclick="neveshtan('3')">3</button>
+            <button class="amal" onclick="ezafe_amal('+')">+</button>
+
+            <button class="adad" onclick="neveshtan('0')">0</button>
+            <button class="adad" onclick="neveshtan('.')">.</button>
+            <button class="mosavi" onclick="mohasebe()">=</button>
+        </div>
+
+        <div class="bakhsh-mabna">
+            <h4>Tabdil Mabna (Base Converter)</h4>
+            
+            <label>Adad (Number):</label>
+            <input type="text" id="mabna_input" placeholder="e.g. 101">
+            
+            <label>Az Mabnaye (From Base):</label>
+            <select id="mabna_az">
+                <option value="2">Base 2 (Binary)</option>
+                <option value="8">Base 8 (Octal)</option>
+                <option value="10" selected>Base 10 (Decimal)</option>
+                <option value="16">Base 16 (Hex)</option>
+            </select>
+            
+            <label>Be Mabnaye (To Base):</label>
+            <select id="mabna_be">
+                <option value="2" selected>Base 2 (Binary)</option>
+                <option value="8">Base 8 (Octal)</option>
+                <option value="10">Base 10 (Decimal)</option>
+                <option value="16">Base 16 (Hex)</option>
+            </select>
+            
+            <button class="mabna-btn" onclick="anjam_tabdil_mabna()">Tabdil (Convert)</button>
+            <div id="natije_mabna">Natije: -</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
